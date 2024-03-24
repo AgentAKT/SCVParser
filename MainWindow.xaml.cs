@@ -192,7 +192,7 @@ namespace CSVParser
                                 deleteDuplicates.IsEnabled = true;
                             }
                             catch {
-                                System.Windows.MessageBox.Show("Что то сломалось. Попробуй в исходных файлах поместить UIDы в 1 столбик");
+                                System.Windows.MessageBox.Show("Кажется, в папке есть пустые файлы, либо файлы только с одним столбцом");
                                 break;
                             }
                             

@@ -5,38 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSVParser"
         mc:Ignorable="d"
-        Title="CSVParser" Height="300" Width="550" Icon="/coffeecup.png" ResizeMode="NoResize">
+        Title="CSVParser" Height="500" Width="750" Icon="/coffeecup.png" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="pathBtn" Content="Папка" HorizontalAlignment="Left" Margin="18,22,0,0" VerticalAlignment="Top" Width="59" Click="pathBtn_Click"/>
-        <Button x:Name="collectUIDs" Content="Обработать UIDы" HorizontalAlignment="Left" Margin="403,175,0,0" VerticalAlignment="Top" Width="108" Click="collectUIDs_Click"/>
-        <Button x:Name="saveToFile" Content="Сохранить в файл" HorizontalAlignment="Left" Margin="403,225,0,0" VerticalAlignment="Top" Width="108" Click="saveToFile_Click"/>
-        <Button x:Name="deleteDuplicates" Content="Удалить дубликаты" HorizontalAlignment="Left" Margin="403,200,0,0" VerticalAlignment="Top" Width="108" Click="deleteDuplicates_Click"/>
+        <Button x:Name="pathBtn" Content="Папка" HorizontalAlignment="Left" Margin="18,23,0,0" VerticalAlignment="Top" Width="72" Click="pathBtn_Click" FontSize="14" Height="35"/>
+        <Button x:Name="collectUIDs" Content="Обработать UIDы" HorizontalAlignment="Left" Margin="571,335,0,0" VerticalAlignment="Top" Width="131" Click="collectUIDs_Click" FontSize="14" Height="35"/>
+        <Button x:Name="saveToFile" Content="Сохранить в файл" HorizontalAlignment="Left" Margin="571,411,0,0" VerticalAlignment="Top" Width="131" Click="saveToFile_Click" FontSize="14" Height="35"/>
+        <Button x:Name="deleteDuplicates" Content="Удалить дубликаты" HorizontalAlignment="Left" Margin="571,373,0,0" VerticalAlignment="Top" Width="131" Click="deleteDuplicates_Click" FontSize="14" Height="35"/>
 
-        <TextBox x:Name="pathTextBox" HorizontalAlignment="Left" Margin="133,23,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="378" KeyDown="pathTextBox_KeyDown"/>
-        <TextBox x:Name="numberOfColumnTextBox" HorizontalAlignment="Left" Margin="168,73,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="numberOfValuesTextBox" HorizontalAlignment="Left" Margin="168,104,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="valuesRandomFromTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="52" Margin="166,136,0,0"/>
-        <TextBox x:Name="valuesRandomToTextBox" HorizontalAlignment="Left" Margin="252,136,0,0" TextWrapping="Wrap" Text="200" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="timeRandomFromTextBox" HorizontalAlignment="Left" Margin="168,170,0,0" TextWrapping="Wrap" Text="60" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="timeRandomToTextBox" HorizontalAlignment="Left" Margin="252,170,0,0" TextWrapping="Wrap" Text="120" VerticalAlignment="Top" Width="52"/>
+        <TextBox x:Name="pathTextBox" HorizontalAlignment="Left" Margin="158,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="544" KeyDown="pathTextBox_KeyDown" FontSize="16" Height="32"/>
+        <TextBox x:Name="numberOfColumnTextBox" HorizontalAlignment="Left" Margin="270,128,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="61" FontSize="20" Height="32"/>
+        <TextBox x:Name="numberOfValuesTextBox" HorizontalAlignment="Left" Margin="270,170,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="61" FontSize="20" Height="32"/>
+        <TextBox x:Name="valuesRandomFromTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="64" Margin="267,215,0,0" FontSize="20" Height="32"/>
+        <TextBox x:Name="valuesRandomToTextBox" HorizontalAlignment="Left" Margin="387,214,0,0" TextWrapping="Wrap" Text="200" VerticalAlignment="Top" Width="60" FontSize="20" Height="32"/>
+        <TextBox x:Name="timeRandomFromTextBox" HorizontalAlignment="Left" Margin="270,261,0,0" TextWrapping="Wrap" Text="60" VerticalAlignment="Top" Width="61" FontSize="20" Height="33"/>
+        <TextBox x:Name="timeRandomToTextBox" HorizontalAlignment="Left" Margin="385,260,0,0" TextWrapping="Wrap" Text="120" VerticalAlignment="Top" Width="64" FontSize="20" Height="33"/>
 
-        <Label x:Name="pathLabel" Content="Путь:" HorizontalAlignment="Left" Margin="90,19,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="processedFilesLabel" Content="Найдено .csv файлов:" HorizontalAlignment="Left" Margin="375,54,0,0" VerticalAlignment="Top" FontSize="8"/>
-        <Label x:Name="processedRowsLabel" Content="Обработано строк:" HorizontalAlignment="Left" Margin="375,68,0,0" VerticalAlignment="Top" FontSize="8"/>
-        <Label x:Name="collectedUIDsLabel" Content="Выбрано UIDов:" HorizontalAlignment="Left" Margin="375,83,0,0" VerticalAlignment="Top" FontSize="8"/>
-        <Label x:Name="processedFilesLabelValue" Content="0" HorizontalAlignment="Left" Margin="468,54,0,0" VerticalAlignment="Top" Width="42" FontSize="8"/>
-        <Label x:Name="processedRowsLabelValue" Content="0" HorizontalAlignment="Left" Margin="468,68,0,0" VerticalAlignment="Top" Width="42" FontSize="8"/>
-        <Label x:Name="collectedUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="468,82,0,0" VerticalAlignment="Top" Width="42" FontSize="8"/>
-        <Label x:Name="numberOfColumnLabel" Content="Номер столбца:" HorizontalAlignment="Left" Margin="18,70,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="numberOfValuesLabel" Content="Количество значений:" HorizontalAlignment="Left" Margin="17,101,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="valuesRandomLabel" Content="Значения (рандом):     от" HorizontalAlignment="Left" Margin="17,132,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="timeRandomLabel" Content="Время (рандом):          от" HorizontalAlignment="Left" Margin="18,165,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="valueToLabel" Content="до" HorizontalAlignment="Left" Margin="224,132,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="timeToLabel" Content="до" HorizontalAlignment="Left" Margin="222,164,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="collectedUIDsLabel_Copy" Content="Удалено дубликатов:" HorizontalAlignment="Left" Margin="375,98,0,0" VerticalAlignment="Top" FontSize="8"/>
-        <Label x:Name="deletedUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="468,97,0,0" VerticalAlignment="Top" Width="42" FontSize="8"/>
-        <Label x:Name="collectedUIDsLabel_Copy1" Content="Записано в файл:" HorizontalAlignment="Left" Margin="375,113,0,0" VerticalAlignment="Top" FontSize="8"/>
-        <Label x:Name="writeToFileUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="468,112,0,0" VerticalAlignment="Top" Width="42" FontSize="8"/>
+        <Label x:Name="pathLabel" Content="Путь:" HorizontalAlignment="Left" Margin="106,19,0,0" VerticalAlignment="Top" FontSize="14" Height="43" Width="57"/>
+        <Label x:Name="processedFilesLabel" Content="Найдено .csv файлов:" HorizontalAlignment="Left" Margin="523,81,0,0" VerticalAlignment="Top" Height="35" Width="142"/>
+        <Label x:Name="processedRowsLabel" Content="Обработано строк:" HorizontalAlignment="Left" Margin="523,105,0,0" VerticalAlignment="Top" Height="36" Width="127"/>
+        <Label x:Name="collectedUIDsLabel" Content="Выбрано UIDов:" HorizontalAlignment="Left" Margin="523,132,0,0" VerticalAlignment="Top" Height="36" Width="112"/>
+        <Label x:Name="processedFilesLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,83,0,0" VerticalAlignment="Top" Width="65" Height="36"/>
+        <Label x:Name="processedRowsLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,108,0,0" VerticalAlignment="Top" Width="65" Height="36"/>
+        <Label x:Name="collectedUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,132,0,0" VerticalAlignment="Top" Width="65" Height="37"/>
+        <Label x:Name="numberOfColumnLabel" Content="Номер столбца:" HorizontalAlignment="Left" Margin="18,123,0,0" VerticalAlignment="Top" FontSize="20" Height="44" Width="154"/>
+        <Label x:Name="numberOfValuesLabel" Content="Количество значений:" HorizontalAlignment="Left" Margin="17,166,0,0" VerticalAlignment="Top" FontSize="20" Height="43" Width="223"/>
+        <Label x:Name="valuesRandomLabel" Content="Значения (рандом):     от" HorizontalAlignment="Left" Margin="17,209,0,0" VerticalAlignment="Top" FontSize="20" Height="43" Width="245"/>
+        <Label x:Name="timeRandomLabel" Content="Время (рандом):          от" HorizontalAlignment="Left" Margin="18,255,0,0" VerticalAlignment="Top" FontSize="20" Height="43" Width="247"/>
+        <Label x:Name="valueToLabel" Content="до" HorizontalAlignment="Left" Margin="338,209,0,0" VerticalAlignment="Top" FontSize="20" Height="43" Width="34"/>
+        <Label x:Name="timeToLabel" Content="до" HorizontalAlignment="Left" Margin="335,254,0,0" VerticalAlignment="Top" FontSize="20" Height="43" Width="35"/>
+        <Label x:Name="collectedUIDsLabel_Copy" Content="Удалено дубликатов:" HorizontalAlignment="Left" Margin="523,158,0,0" VerticalAlignment="Top" Height="36" Width="140"/>
+        <Label x:Name="deletedUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,159,0,0" VerticalAlignment="Top" Width="65" Height="36"/>
+        <Label x:Name="collectedUIDsLabel_Copy1" Content="Записано в файл:" HorizontalAlignment="Left" Margin="523,184,0,0" VerticalAlignment="Top" Height="36" Width="119"/>
+        <Label x:Name="writeToFileUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,185,0,0" VerticalAlignment="Top" Width="65" Height="36"/>
 
 
     </Grid>
