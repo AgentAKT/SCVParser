@@ -18,6 +18,7 @@ using static System.Net.WebRequestMethods;
 using System.Collections;
 using System.Security.Cryptography;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace CSVParser
 {
@@ -380,5 +381,8 @@ namespace CSVParser
 
         }
 
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
