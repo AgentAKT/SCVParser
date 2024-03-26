@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSVParser"
         mc:Ignorable="d"
-        Title="CSVParser" Height="500" Width="750" Icon="/coffeecup.png" ResizeMode="NoResize">
+        Title="CSVParser" Height="500" Width="750" Icon="/coffeecup.png" ResizeMode="CanResize">
     <Grid>
         <Button x:Name="pathBtn" Content="Папка" HorizontalAlignment="Left" Margin="18,23,0,0" VerticalAlignment="Top" Width="72" Click="pathBtn_Click" FontSize="14" Height="35"/>
-        <Button x:Name="collectUIDs" Content="Обработать UIDы" HorizontalAlignment="Left" Margin="571,335,0,0" VerticalAlignment="Top" Width="131" Click="collectUIDs_Click" FontSize="14" Height="35"/>
+        <Button x:Name="collectUIDs" Content="Обработать UIDы" HorizontalAlignment="Left" Margin="571,335,0,0" VerticalAlignment="Top" Width="131" Click="collectUIDs_Click" FontSize="14" Height="35"></Button>
         <Button x:Name="saveToFile" Content="Сохранить в файл" HorizontalAlignment="Left" Margin="571,411,0,0" VerticalAlignment="Top" Width="131" Click="saveToFile_Click" FontSize="14" Height="35"/>
         <Button x:Name="deleteDuplicates" Content="Удалить дубликаты" HorizontalAlignment="Left" Margin="571,373,0,0" VerticalAlignment="Top" Width="131" Click="deleteDuplicates_Click" FontSize="14" Height="35"/>
 
@@ -24,9 +24,9 @@
         <Label x:Name="processedFilesLabel" Content="Найдено .csv файлов:" HorizontalAlignment="Left" Margin="523,81,0,0" VerticalAlignment="Top" Height="35" Width="142"/>
         <Label x:Name="processedRowsLabel" Content="Обработано строк:" HorizontalAlignment="Left" Margin="523,105,0,0" VerticalAlignment="Top" Height="36" Width="127"/>
         <Label x:Name="collectedUIDsLabel" Content="Выбрано UIDов:" HorizontalAlignment="Left" Margin="523,132,0,0" VerticalAlignment="Top" Height="36" Width="112"/>
-        <Label x:Name="processedFilesLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,83,0,0" VerticalAlignment="Top" Width="65" Height="36"/>
-        <Label x:Name="processedRowsLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,108,0,0" VerticalAlignment="Top" Width="65" Height="36"/>
-        <Label x:Name="collectedUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,132,0,0" VerticalAlignment="Top" Width="65" Height="37"/>
+        <Label x:Name="processedFilesLabelValue" Content="0" HorizontalAlignment="Left" Margin="650,81,0,0" VerticalAlignment="Top" Width="65" Height="36" FontSize="14"/>
+        <Label x:Name="processedRowsLabelValue" Content="0" HorizontalAlignment="Left" Margin="650,105,0,0" VerticalAlignment="Top" Width="65" Height="36" FontSize="14"/>
+        <Label x:Name="collectedUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="650,131,0,0" VerticalAlignment="Top" Width="65" Height="37" FontSize="14"/>
         <Label x:Name="numberOfColumnLabel" Content="Номер столбца:" HorizontalAlignment="Left" Margin="18,123,0,0" VerticalAlignment="Top" FontSize="20" Height="44" Width="154"/>
         <Label x:Name="numberOfValuesLabel" Content="Количество значений:" HorizontalAlignment="Left" Margin="17,166,0,0" VerticalAlignment="Top" FontSize="20" Height="43" Width="223"/>
         <Label x:Name="valuesRandomLabel" Content="Значения (рандом):     от" HorizontalAlignment="Left" Margin="17,209,0,0" VerticalAlignment="Top" FontSize="20" Height="43" Width="245"/>
@@ -34,9 +34,9 @@
         <Label x:Name="valueToLabel" Content="до" HorizontalAlignment="Left" Margin="338,209,0,0" VerticalAlignment="Top" FontSize="20" Height="43" Width="34"/>
         <Label x:Name="timeToLabel" Content="до" HorizontalAlignment="Left" Margin="335,254,0,0" VerticalAlignment="Top" FontSize="20" Height="43" Width="35"/>
         <Label x:Name="collectedUIDsLabel_Copy" Content="Удалено дубликатов:" HorizontalAlignment="Left" Margin="523,158,0,0" VerticalAlignment="Top" Height="36" Width="140"/>
-        <Label x:Name="deletedUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,159,0,0" VerticalAlignment="Top" Width="65" Height="36"/>
+        <Label x:Name="deletedUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="650,158,0,0" VerticalAlignment="Top" Width="65" Height="36" FontSize="14"/>
         <Label x:Name="collectedUIDsLabel_Copy1" Content="Записано в файл:" HorizontalAlignment="Left" Margin="523,184,0,0" VerticalAlignment="Top" Height="36" Width="119"/>
-        <Label x:Name="writeToFileUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="647,185,0,0" VerticalAlignment="Top" Width="65" Height="36"/>
+        <Label x:Name="writeToFileUIDsLabelValue" Content="0" HorizontalAlignment="Left" Margin="650,184,0,0" VerticalAlignment="Top" Width="65" Height="36" FontSize="14"/>
 
 
     </Grid>

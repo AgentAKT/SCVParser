@@ -209,6 +209,10 @@ namespace CSVParser
             {
                 System.Windows.MessageBox.Show("Кажется, в выбранном столбце нет UIDов");
             }
+            else if (counterAddUids >1900000)
+            {
+                System.Windows.MessageBox.Show("Слишком много UIDов: " + counterAddUids + " я столько не переварю :)");
+            }
             //for (int j = 0; j < uidsList.Count; j++)
             //{
             //    Console.WriteLine(uidsList[j]);
@@ -238,6 +242,15 @@ namespace CSVParser
         //    Удалить дубликаты
         private void deleteDuplicates_Click(object sender, RoutedEventArgs e)
         {
+            if (counterAddUids >= 1200000)
+            {
+                System.Windows.MessageBox.Show("Я насобирал " + counterAddUids + " UIDов. Это много. Я сейчас зависну (до 15 минут), а потом отвисну. Попей кофе");
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Начал считать, никуда не уходи");
+            }
+
             fullResultUidsList.Clear();
 
             counterDuplicates = 0; //  Счетчик дубликатов UIDов
@@ -361,5 +374,11 @@ namespace CSVParser
             }
             else { return false; }
         }
+
+        private void prBar_ValueChanged()
+        {
+
+        }
+
     }
 }
