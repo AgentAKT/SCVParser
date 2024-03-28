@@ -13,7 +13,7 @@
         <Button x:Name="deleteDuplicates" Content="Удалить дубликаты" HorizontalAlignment="Left" Margin="571,373,0,0" VerticalAlignment="Top" Width="131" Click="deleteDuplicates_Click" FontSize="14" Height="35"/>
 
         <TextBox x:Name="pathTextBox" HorizontalAlignment="Left" Margin="158,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="544" KeyDown="pathTextBox_KeyDown" FontSize="16" Height="32"/>
-        <TextBox x:Name="numberOfColumnTextBox" HorizontalAlignment="Left" Margin="270,128,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="61" FontSize="20" Height="32"/>
+        <TextBox x:Name="numberOfColumnTextBox" HorizontalAlignment="Left" Margin="270,128,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="61" FontSize="20" Height="32" TextChanged="numberOfColumnTextBox_TextChanged"/>
         <TextBox x:Name="numberOfValuesTextBox" HorizontalAlignment="Left" Margin="270,170,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="61" FontSize="20" Height="32"/>
         <TextBox x:Name="valuesRandomFromTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="64" Margin="267,215,0,0" FontSize="20" Height="32">
             <TextBox.Style>
@@ -70,7 +70,7 @@
                 </TransformGroup>
             </CheckBox.RenderTransform>
         </CheckBox>
-        <TextBox x:Name="numberOfColumnMeasurements" HorizontalAlignment="Left" Margin="385,128,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="61" FontSize="20" Height="32" IsEnabled="True">
+        <TextBox x:Name="numberOfColumnMeasurements" HorizontalAlignment="Left" Margin="385,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="61" FontSize="20" Height="32" IsEnabled="True">
             <TextBox.Style>
                 <Style TargetType="{x:Type TextBox}">
                     <Setter Property="Visibility" Value="Collapsed"/>

@@ -152,6 +152,7 @@ namespace CSVParser
 
         private void collectUIDs_Click(object sender, RoutedEventArgs e)
         {
+
             uidsList.Clear();
             onlyUidsList.Clear();
             fullUidsList.Clear();
@@ -162,11 +163,11 @@ namespace CSVParser
             counterDuplicates = 0; // Счетчик дубликатов UIDов
             counterAddInFileUIDs = 0; //  Счетчик UIDов добавленных в файл
 
-            if (pathTextBox.Text == "")
+            if (checkMeasurements() | checkPeriods() | checktimes() | checkColumns() | checkpathTextBox())
             {
-                System.Windows.MessageBox.Show("Заполни путь к файлам");
-                deleteDuplicates.IsEnabled = false;
+
             }
+
             else
             {
                 foreach (string s in pathFilesList)
@@ -376,13 +377,39 @@ namespace CSVParser
             else { return false; }
         }
 
-        private void prBar_ValueChanged()
+        private bool checkColumns()
+        {
+            if (numberOfColumnMeasurements.Text == numberOfColumnTextBox.Text)
+            {
+                System.Windows.MessageBox.Show("UIDы и замеры должны быть в разных столбцах");
+                return true;
+            }
+            else { return false; }
+        }
+
+        private bool checkpathTextBox()
+        {
+            if (pathTextBox.Text == "")
+            {
+                System.Windows.MessageBox.Show("Заполни путь к файлам");
+                return true;
+            }
+            else { return false; }
+        }
+
+
+    private void prBar_ValueChanged()
         {
 
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void numberOfColumnTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
